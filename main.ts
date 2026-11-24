@@ -13,8 +13,8 @@ async function main() {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  // Write the single-line excuse to entry.txt
-  fs.writeFileSync(outputPath, ENTRY_LINE + '\n', 'utf-8');
+  // Write the single-line excuse to entry.txt (one line, under the 200-character gate)
+  fs.writeFileSync(outputPath, `${ENTRY_LINE}\n`, 'utf-8');
 
   console.log('Successfully wrote entry to /output/entry.txt');
 }
